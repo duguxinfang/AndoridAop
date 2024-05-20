@@ -15,9 +15,20 @@ public class TraceUtil {
      *
      * @param activity
      */
-    public static void onActivityCreate(Activity activity) {
+    public static void onActivityCreat(Activity activity) {
         Toast.makeText(activity
                 , activity.getClass().getName() + "call onCreate"
+                , Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * 当Activity执行了onResume时触发
+     *
+     * @param activity
+     */
+    public static void onActivityResume(Activity activity) {
+        Toast.makeText(activity
+                , activity.getClass().getName() + "call onResume"
                 , Toast.LENGTH_LONG).show();
     }
 

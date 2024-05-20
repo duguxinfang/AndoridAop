@@ -1,0 +1,10 @@
+//apply plugin: 'maven'
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri(project.getProperty('LOCAL_REPO_URL')))
+//        rintln("=======" + repositories.mavenLocal().url)
+        pom.groupId = project.getProperty('PROJ_GROUP')
+        pom.artifactId = project.getProperty('PROJ_ARTIFACTID')
+        pom.version = project.getProperty('PROJ_VERSION')
+    }
+}

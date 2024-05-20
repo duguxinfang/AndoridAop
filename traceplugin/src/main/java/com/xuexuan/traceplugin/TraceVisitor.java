@@ -80,11 +80,11 @@ public class TraceVisitor extends ClassVisitor {
             @Override
             protected void onMethodEnter() {
                 if (isInject()) {
-                    if ("onCreate".equals(name)) {
+                    if ("onResume".equals(name)) {
                         mv.visitVarInsn(ALOAD, 0);
                         mv.visitMethodInsn(INVOKESTATIC,
                                 "com/xuexuan/androidaop/traceutils/TraceUtil",
-                                "onActivityCreate", "(Landroid/app/Activity;)V",
+                                "onActivityResume", "(Landroid/app/Activity;)V",
                                 false);
                     } else if ("onDestroy".equals(name)) {
                         mv.visitVarInsn(ALOAD, 0);

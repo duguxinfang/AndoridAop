@@ -7,13 +7,14 @@ buildscript {
         jcenter()
 //        TODO 必须更换为你自己的路径
         maven {
-            url 'file://C:/AndroidStudioProjects/AndroidAOP/traceplugin'
+//            url 'file://C:/AndroidStudioProjects/AndroidAOP/traceplugin'
+            url './traceplugin'
         }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.31"
-        classpath 'xuexuan.github.com.traceplugin:traceplugin:1.0.0'
+        classpath 'xuexuan.github.com.traceplugin:testplugin:1.0.3'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

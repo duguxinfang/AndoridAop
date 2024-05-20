@@ -1,6 +1,7 @@
 apply plugin: 'java-gradle-plugin'
 apply plugin: 'kotlin'
 apply plugin: 'maven'
+apply from: file('upload.gradle')
 
 dependencies {
     compileOnly gradleApi()
@@ -15,11 +16,12 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 
-uploadArchives {
-    repositories.mavenDeployer {
-        repository(url: LOCAL_REPO_URL)
-        pom.groupId = PROJ_GROUP
-        pom.artifactId = PROJ_ARTIFACTID
-        pom.version = PROJ_VERSION
-    }
-}
+//uploadArchives {
+//    repositories.mavenDeployer {
+////        repository(url: LOCAL_REPO_URL)
+//        repository(url: uri('./'))
+//        pom.groupId = PROJ_GROUP
+//        pom.artifactId = PROJ_ARTIFACTID
+//        pom.version = PROJ_VERSION
+//    }
+//}
